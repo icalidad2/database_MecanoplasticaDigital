@@ -25,5 +25,7 @@
 
 - [x] Paquete abierto.
 - [x] Script de Puerta A P0 agregado: `001_p0_integridad.sql`.
+- [x] Script P1-01 agregado: `002_p1_estado_fechas_op.sql`.
 - [x] Resultados P0 registrados en `RESULTADOS_PUERTA_A.md`.
+- [x] Resultados del Bloque 3 registrados en `RESULTADOS_BLOQUE_3.md`.
 - [ ] Evidencia persistente E2E conservada.

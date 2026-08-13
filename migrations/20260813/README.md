@@ -9,7 +9,7 @@ núcleo operativo en la rama Neon `diseno-nucleo-v0-2`.
 
 1. `001_p0_elegibilidad_lote.sql`
 2. `002_p0_consistencia_reversion_recepcion.sql`
-3. `003_p1_estado_fechas_op.sql`, sujeto a confirmación de la máquina de estados.
+3. `003_p1_estado_fechas_op.sql`.
 
 ## Reglas del paquete
 
@@ -27,4 +27,5 @@ núcleo operativo en la rama Neon `diseno-nucleo-v0-2`.
 - [x] Inventario de definiciones afectadas capturado.
 - [x] Migraciones P0 implementadas.
 - [x] Migraciones P0 probadas en `diseno-nucleo-v0-2`.
+- [x] Migración P1-01 probada en `diseno-nucleo-v0-2`.
 - [x] Evidencia P0 enlazada con `tests/20260813/001_p0_integridad.sql`.
