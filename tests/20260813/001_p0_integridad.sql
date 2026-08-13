@@ -60,6 +60,7 @@ BEGIN
       FROM public.lotes l
       CROSS JOIN (VALUES
         ('TEST-P0-CUARENTENA', 'TEST-P0-CUARENTENA', 'CUARENTENA', 'BLOQUEADO'),
+        ('TEST-P0-BLOQUEADO',  'TEST-P0-BLOQUEADO',  'APROBADO',   'BLOQUEADO'),
         ('TEST-P0-RECHAZADO',  'TEST-P0-RECHAZADO',  'RECHAZADO',  'BLOQUEADO'),
         ('TEST-P0-APROBADO',   'TEST-P0-APROBADO',   'APROBADO',   'LIBERADO')
       ) AS v(id, codigo_lote, estado_calidad, estado_liberacion)
@@ -79,6 +80,7 @@ BEGIN
       FROM public.movimientos_inventario m
       CROSS JOIN (VALUES
         ('P0-CUARENTENA', 'TEST-P0-CUARENTENA'),
+        ('P0-BLOQUEADO',  'TEST-P0-BLOQUEADO'),
         ('P0-RECHAZADO',  'TEST-P0-RECHAZADO'),
         ('P0-APROBADO',   'TEST-P0-APROBADO')
       ) AS v(sufijo, lote_id)
@@ -86,7 +88,9 @@ BEGIN
 
     IF EXISTS (
       SELECT 1 FROM public.vw_app_inventario
-       WHERE lote_id IN ('TEST-P0-CUARENTENA', 'TEST-P0-RECHAZADO')
+       WHERE lote_id IN (
+         'TEST-P0-CUARENTENA', 'TEST-P0-BLOQUEADO', 'TEST-P0-RECHAZADO'
+       )
          AND apto_para_surtido
     ) THEN
       RAISE EXCEPTION 'P0_01_FALLO: vista acepto CUARENTENA o RECHAZADO';
@@ -107,6 +111,15 @@ BEGIN
     EXCEPTION WHEN SQLSTATE 'P0001' THEN
       GET STACKED DIAGNOSTICS v_error = MESSAGE_TEXT;
       IF v_error NOT LIKE 'LOTE_CALIDAD_NO_APROBADA:%' THEN RAISE; END IF;
+    END;
+
+    BEGIN
+      INSERT INTO prueba_surtido_detalle VALUES
+        ('TEST-P0-BLOQUEADO', NULL, 'UB-AL-RECEP-PP', 'UNIDAD-KG');
+      RAISE EXCEPTION 'P0_01_FALLO: trigger acepto BLOQUEADO';
+    EXCEPTION WHEN SQLSTATE 'P0001' THEN
+      GET STACKED DIAGNOSTICS v_error = MESSAGE_TEXT;
+      IF v_error NOT LIKE 'LOTE_NO_LIBERADO:%' THEN RAISE; END IF;
     END;
 
     BEGIN
