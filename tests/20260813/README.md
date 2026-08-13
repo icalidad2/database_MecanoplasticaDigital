@@ -31,3 +31,5 @@
 - [x] Resultados del Bloque 3 registrados en `RESULTADOS_BLOQUE_3.md`.
 - [x] Resultados de Puerta B registrados en `RESULTADOS_PUERTA_B.md`.
 - [x] Evidencia persistente E2E conservada con prefijo `E2E-20260813-*`.
+- [x] Resultado de reconstrucción registrado en `RESULTADOS_PUERTA_C.md`.
+- [ ] Puerta C aprobada; bloqueada por ausencia de migración fundacional.

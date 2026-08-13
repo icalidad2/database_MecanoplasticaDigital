@@ -21,6 +21,8 @@ núcleo operativo en la rama Neon `diseno-nucleo-v0-2`.
 - Las correcciones de datos deben separarse de las restricciones estructurales
   cuando faciliten auditoría y reversión.
 - No incluir tablas especializadas de los MVP posteriores.
+- Verificar la integridad del paquete con `sha256sum -c MANIFEST.sha256` desde
+  la raíz del repositorio.
 
 ## Estado
 
@@ -30,4 +32,6 @@ núcleo operativo en la rama Neon `diseno-nucleo-v0-2`.
 - [x] Migraciones P0 probadas en `diseno-nucleo-v0-2`.
 - [x] Migración P1-01 probada en `diseno-nucleo-v0-2`.
 - [x] Caso E2E persistente ejecutado y validado.
+- [x] Orden, precondiciones y checksums documentados.
+- [ ] Línea base fundacional anterior al 13/08 versionada.
 - [x] Evidencia P0 enlazada con `tests/20260813/001_p0_integridad.sql`.
