@@ -26,6 +26,8 @@
 - [x] Paquete abierto.
 - [x] Script de Puerta A P0 agregado: `001_p0_integridad.sql`.
 - [x] Script P1-01 agregado: `002_p1_estado_fechas_op.sql`.
+- [x] Consultas E2E agregadas: `003_e2e_nucita_persistente.sql`.
 - [x] Resultados P0 registrados en `RESULTADOS_PUERTA_A.md`.
 - [x] Resultados del Bloque 3 registrados en `RESULTADOS_BLOQUE_3.md`.
-- [ ] Evidencia persistente E2E conservada.
+- [x] Resultados de Puerta B registrados en `RESULTADOS_PUERTA_B.md`.
+- [x] Evidencia persistente E2E conservada con prefijo `E2E-20260813-*`.

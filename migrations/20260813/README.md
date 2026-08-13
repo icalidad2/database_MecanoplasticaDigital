@@ -10,6 +10,7 @@ núcleo operativo en la rama Neon `diseno-nucleo-v0-2`.
 1. `001_p0_elegibilidad_lote.sql`
 2. `002_p0_consistencia_reversion_recepcion.sql`
 3. `003_p1_estado_fechas_op.sql`.
+4. `004_e2e_nucita_persistente.sql`.
 
 ## Reglas del paquete
 
@@ -28,4 +29,5 @@ núcleo operativo en la rama Neon `diseno-nucleo-v0-2`.
 - [x] Migraciones P0 implementadas.
 - [x] Migraciones P0 probadas en `diseno-nucleo-v0-2`.
 - [x] Migración P1-01 probada en `diseno-nucleo-v0-2`.
+- [x] Caso E2E persistente ejecutado y validado.
 - [x] Evidencia P0 enlazada con `tests/20260813/001_p0_integridad.sql`.
