@@ -24,7 +24,7 @@ núcleo operativo en la rama Neon `diseno-nucleo-v0-2`.
 ## Estado
 
 - [x] Paquete abierto.
-- [ ] Inventario de definiciones afectadas capturado.
-- [ ] Migraciones implementadas.
-- [ ] Migraciones probadas en rama limpia.
-- [ ] Evidencia enlazada con las pruebas SQL.
+- [x] Inventario de definiciones afectadas capturado.
+- [x] Migraciones P0 implementadas.
+- [x] Migraciones P0 probadas en `diseno-nucleo-v0-2`.
+- [x] Evidencia P0 enlazada con `tests/20260813/001_p0_integridad.sql`.

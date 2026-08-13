@@ -24,6 +24,6 @@
 ## Estado
 
 - [x] Paquete abierto.
-- [ ] Scripts de prueba agregados.
-- [ ] Resultados registrados.
+- [x] Script de Puerta A P0 agregado: `001_p0_integridad.sql`.
+- [x] Resultados P0 registrados en `RESULTADOS_PUERTA_A.md`.
 - [ ] Evidencia persistente E2E conservada.
