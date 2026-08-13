@@ -11,6 +11,7 @@ Resultado: **APROBADA**
 |---|---:|---:|---|
 | Lote real `260810`, `CUARENTENA/BLOQUEADO` | No apto | Rechazado | Aprobado |
 | Lote controlado `CUARENTENA/BLOQUEADO` | No apto | Rechazado | Aprobado |
+| Lote controlado `APROBADO/BLOQUEADO` | No apto | Rechazado | Aprobado |
 | Lote controlado `RECHAZADO/BLOQUEADO` | No apto | Rechazado | Aprobado |
 | Lote controlado `APROBADO/LIBERADO` con saldo disponible | Apto | Aceptado | Aprobado |
 
@@ -39,4 +40,3 @@ identificadores `TEST-P0-*`. No quedaron datos de prueba persistentes.
 
 Puerta A aprobada. El E2E puede iniciar cuando corresponda al siguiente bloque;
 esta evidencia no autoriza ningún cambio en `production`.
-
