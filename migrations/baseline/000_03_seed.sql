@@ -1,0 +1,3 @@
+-- Parte 3/3 — datos maestros.
+-- La fundacion conserva los seis catalogos heredados de production.
+-- Los fixtures controlados del caso Nucita se crean en 004_e2e_nucita_persistente.sql.
